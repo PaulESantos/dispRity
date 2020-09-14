@@ -1,4 +1,5 @@
-#' Measuring Disparity in R
+#en' Measuring Disparity in R
+#fr' Mesurer la disparité avec R
 #' 
 #' A modular package for measuring disparity from multidimensional matrices. Disparity can be calculated from any matrix defining a multidimensional space. The package provides a set of implemented metrics to measure properties of the space and allows users to provide and test their own metrics. The package also provides functions for looking at disparity in a serial way (e.g. disparity through time) or per groups as well as visualising the results. Finally, this package provides several basic statistical tests for disparity analysis.
 #' 
