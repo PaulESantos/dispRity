@@ -1,29 +1,43 @@
-#' @name bhatt.coeff 
-#'
-#' @title Bhattacharrya Coefficient
-#'
-#' @description Calculates the probability of overlap between two distributions.
-#'
-#' @param x,y two distributions.
-#' @param bw the bandwidth size, either a \code{numeric} or a \code{function} (see \code{\link[stats]{bw.nrd0}}).
-#' @param ... optional arguments to be passed to the \code{bw} argument.
-#'
-#' @examples
-#' ## Two dummy distributions
-#' x <- rnorm(1000, 0, 1)
-#' y <- rnorm(1000, 1, 2)
-#'
-#' ## What is the probability of overlap of these distributions?
-#' bhatt.coeff(x, y)
-#'
-#' @seealso \code{\link{test.dispRity}}, \code{\link{null.test}}.
-# \code{\link{sequential.test}}
-#'
-#' @references
-#' Bhattacharyya A. \bold{1943}. On a measure of divergence between two statistical populations defined by their probability distributions. Bull. Calcutta Math. Soc., 35, pp. 99-109
-#' 
-#' @author Thomas Guillerme
-# @export
+#en' @name bhatt.coeff 
+#fr' @name bhatt.coeff  
+#
+#en' @title Bhattacharrya Coefficient
+#fr' @title Coefficient de Bhattacharrya
+#
+#en' @description Calculates the probability of overlap between two distributions.
+#fr' @description Calcule la probabilité de chevauchement de deux distributions.
+#
+#en' @param x,y two distributions.
+#fr' @param x,y deux distributions.
+#en' @param bw the bandwidth size, either a \code{numeric} or a \code{function} (see \code{\link[stats]{bw.nrd0}}).
+#fr' @param bw la largeur des sections de densité. Peut-être un \code{numeric} ou une \code{function} (voir \code{\link[stats]{bw.nrd0}}).
+#en' @param ... optional arguments to be passed to the \code{bw} argument.
+#fr' @param ... arguments optionels pour l'argument \code{bw}.
+#
+#en' @examples
+#fr' @examples
+#en' ## Two dummy distributions
+#fr' ## Deux distributions bidon 
+#en' x <- rnorm(1000, 0, 1)
+#fr' x <- rnorm(1000, 0, 1)
+#en' y <- rnorm(1000, 1, 2)
+#fr' y <- rnorm(1000, 1, 2)
+#en'
+#fr'
+#en' ## What is the probability of overlap of these distributions?
+#fr' ## Quelle est la probabilité de chevauchement de ces distributions?
+#en' bhatt.coeff(x, y)
+#fr' bhatt.coeff(x, y)
+#
+#
+#en' @seealso \code{\link{test.dispRity}}, \code{\link{null.test}}.
+#fr' @seealso \code{\link{test.dispRity}}, \code{\link{null.test}}.
+#en' @references
+#fr' @references
+#en' Bhattacharyya A. \bold{1943}. On a measure of divergence between two statistical populations defined by their probability distributions. Bull. Calcutta Math. Soc., 35, pp. 99-109
+#fr' Bhattacharyya A. \bold{1943}. On a measure of divergence between two statistical populations defined by their probability distributions. Bull. Calcutta Math. Soc., 35, pp. 99-109
+#en' @author Thomas Guillerme
+#fr' @author Thomas Guillerme
 
 bhatt.coeff <- function(x, y, bw = bw.nrd0, ...) {
     ## Check data
