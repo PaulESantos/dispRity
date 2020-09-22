@@ -1,3 +1,7 @@
 TODO:
 
 Try to get a localisation logic in the package manual were the manual is written in english by default (using the tag `#'`) but with the the same lines also written in french (using the tag `#fr`). You can then toggle langages by search replacing `#'` to `#en'` and `#fr'` to `#'`. 
+
+Make a shell script to convert every `#'` into `#en'`. When adding a language, make a shell script to duplicate every `#en'` into `#${LANGTAG}`
+
+Separate this from the main package. Probably by just copying all the manuals separately.
