@@ -26,7 +26,7 @@ make.dispRity <- function(data, call, subsets) {
     ## Add the matrix
     if(!missing(data)) {
         data_class <- class(data)[1]
-        if(c("matrix", "list") %in% data_class) {
+        if(!(data_class %in% c("matrix", "list"))) {
             stop("data should be a matrix or a list.")
         }
         # data_class <- check.class(data, c("matrix", "list"))
