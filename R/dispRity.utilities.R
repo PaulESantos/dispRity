@@ -25,7 +25,11 @@ make.dispRity <- function(data, call, subsets) {
 
     ## Add the matrix
     if(!missing(data)) {
-        data_class <- check.class(data, c("matrix", "list"))
+        data_class <- class(data)[1]
+        if(c("matrix", "list") %in% data_class) {
+            stop("data should be a matrix or a list.")
+        }
+        # data_class <- check.class(data, c("matrix", "list"))
         switch(data_class,
             matrix = {dispRity_object$matrix <- list(data)},
             list = {dispRity_object$matrix <- data})
